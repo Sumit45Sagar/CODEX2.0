@@ -249,3 +249,67 @@ pre {
   flex: 1;
   overflow-y: auto;
 }
+
+
+
+.controls {
+  display: flex;
+  justify-content: flex-end; /* Align dropdown to the right */
+  margin-bottom: 12px;
+}
+
+.languageSelect {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #5B5B5B;
+  background-color: #3A3A3A;
+  color: #EAEAEA;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px; /* Add space between dropdown and edge */
+}
+
+.languageSelect:hover {
+  background-color: #555555;
+}
+
+.languageSelect:focus {
+  border-color: #A1C181;
+}
+
+
+
+
+
+
+
+.buttonGroup {
+  display: flex;
+  align-items: center; /* Align button and dropdown vertically */
+  gap: 10px; /* Space between the Join button and dropdown */
+}
+
+.joinBtn {
+  height: 100%; /* Ensure the height of the Join button is dynamic */
+}
+
+.languageSelect {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #5B5B5B;
+  background-color: #3A3A3A;
+  color: #EAEAEA;
+  font-weight: bold;
+  cursor: pointer;
+  flex-grow: 1; /* Allows the dropdown to take up the remaining space */
+  height: 100%; /* Match the height of the Join button */
+}
+
+.languageSelect:hover {
+  background-color: #555555;
+}
+
+.languageSelect:focus {
+  border-color: #A1C181;
+}
+
