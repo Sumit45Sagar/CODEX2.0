@@ -8,6 +8,10 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #2C2C2C; /* Dark slate grey background */
   color: #EAEAEA; /* Light, muted text for contrast */
+
+
+  
+
 }
 
 .homePageWrapper {
@@ -17,6 +21,15 @@ body {
   justify-content: center;
   height: 100vh;
   background-color: #2C2C2C; /* Same muted background */
+
+
+
+
+  /*background-image: url('i41.jpg'); /* Add your image URL here */
+  /*background-position: center; /* Aligns the image to the center */
+  /*background-repeat: no-repeat; /* Prevents the image from repeating */
+  /*background-size: cover; /* Ensures the image covers the entire background */
+  /*background-attachment: fixed; /* Makes the background image stay in place during scroll */
 }
 
 .formWrapper {
