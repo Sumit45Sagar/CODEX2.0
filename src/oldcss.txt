@@ -1,0 +1,518 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2C2C2C; /* Dark slate grey background */
+  color: #EAEAEA; /* Light, muted text for contrast */
+
+
+  
+
+}
+
+.homePageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #2C2C2C; /* Same muted background */
+
+
+
+
+
+}
+
+.formWrapper {
+  background-color: #383838; /* Soft charcoal grey form background */
+  padding: 30px;
+  border-radius: 12px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  animation: fadeIn 1s ease-in-out;
+  border: 1px solid #5B5B5B; /* Dark grey border */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #3A3A3A; /* Slightly lighter footer */
+  padding: 12px 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #EAEAEA; /* Muted white for text */
+}
+
+footer a {
+  color: #A1C181; /* Muted earthy green for links */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #8AA065; /* Darker green on hover */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mainLabel {
+  margin-bottom: 18px;
+  margin-top: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #EAEAEA; /* Light, muted white */
+}
+
+.homePageLogo {
+  height: 85px;
+  margin-bottom: 40px;
+}
+
+.inputBox {
+  padding: 14px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #5B5B5B; /* Dark grey border */
+  margin-bottom: 14px;
+  background: #4A4A4A; /* Darker grey for form fields */
+  color: #EAEAEA; /* Light muted text */
+  font-size: 16px;
+  font-weight: bold;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.inputBox:hover {
+  background-color: #555555; /* Slightly darker on hover */
+}
+
+.inputBox:focus {
+  border-color: #A1C181; /* Muted earthy green border on focus */
+}
+
+.btn {
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.joinBtn, .leaveBtn, .runBtn {
+  background: #A1C181; /* Muted earthy green for buttons */
+  color: #FFFFFF; /* White text */
+  width: 120px;
+}
+
+.joinBtn:hover, .leaveBtn:hover, .runBtn:hover {
+  background: #8AA065; /* Darker green on hover */
+  transform: scale(1.08);
+}
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn {
+  color: #A1C181; /* Muted earthy green for links */
+  text-decoration: none;
+  border-bottom: 1px solid #A1C181;
+  transition: all 0.3s ease-in-out;
+}
+
+.createNewBtn:hover {
+  color: #8AA065; /* Darker green on hover */
+}
+
+.mainWrap {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.aside {
+  background-color: #3A3A3A; /* Dark grey for the sidebar */
+  padding: 16px;
+  color: #EAEAEA; /* Light muted text */
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.asideInner {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.clientsList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.client:hover {
+  transform: translateY(-4px);
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.logo {
+  border-bottom: 1px solid #5B5B5B; /* Dark grey border for logo */
+  padding-bottom: 10px;
+}
+
+.logoImage {
+  height: 60px;
+}
+
+.leaveBtn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.runBtn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.CodeMirror {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 6px;
+  border: 2px solid #5B5B5B; /* Dark grey border for editor */
+  padding: 12px;
+  background: #3A3A3A; /* Dark grey background for code editor */
+  color: #EAEAEA; /* Light text */
+  overflow: hidden;
+}
+
+.editorOutputWrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.editorWrap, .outputWrap {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.outputWrap {
+  background-color: #383838; /* Charcoal grey for output area */
+  border-left: 1px solid #5B5B5B; /* Dark grey border */
+  overflow-y: auto;
+}
+
+.outputWrap h4 {
+  margin-bottom: 10px;
+  color: #EAEAEA; /* Light muted text */
+  padding: 10px;
+}
+
+pre {
+  background-color: #3A3A3A; /* Dark grey background for code output */
+  color: #EAEAEA; /* Light muted text */
+  padding: 12px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+
+.controls {
+  display: flex;
+  justify-content: flex-end; /* Align dropdown to the right */
+  margin-bottom: 12px;
+}
+
+.languageSelect {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #5B5B5B;
+  background-color: #3A3A3A;
+  color: #EAEAEA;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px; /* Add space between dropdown and edge */
+}
+
+.languageSelect:hover {
+  background-color: #555555;
+}
+
+.languageSelect:focus {
+  border-color: #A1C181;
+}
+
+
+
+
+
+
+
+.buttonGroup {
+  display: flex;
+  align-items: center; /* Align button and dropdown vertically */
+  gap: 10px; /* Space between the Join button and dropdown */
+}
+
+.joinBtn {
+  height: 100%; /* Ensure the height of the Join button is dynamic */
+}
+
+.languageSelect {
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #5B5B5B;
+  background-color: #3A3A3A;
+  color: #EAEAEA;
+  font-weight: bold;
+  cursor: pointer;
+  flex-grow: 1; /* Allows the dropdown to take up the remaining space */
+  height: 100%; /* Match the height of the Join button */
+}
+
+.languageSelect:hover {
+  background-color: #555555;
+}
+
+.languageSelect:focus {
+  border-color: #A1C181;
+}
+
+
+
+/*Now adding css for login and dashboard page */
+
+
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #F0B5B5 30%, #F0CBB5 100%);
+}
+
+.login-container {
+  display: flex;
+  width: 800px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Left Section for Illustration */
+.login-left {
+  width: 50%;
+  background-color: #ffebe6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-illustration {
+  width: 180%;
+  object-fit: cover;
+}
+
+/* Right Section for Login Form */
+.login-right {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffe2db;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 .highlight {
+  color: #ff6600;
+}
+
+.social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.google-btn, .facebook-btn {
+  flex: 1;
+  padding: 10px;
+  margin: 0 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.google-btn {
+  color: #db4437;
+}
+
+.facebook-btn {
+  color: #4267B2;
+}
+
+p {
+  text-align: center;
+  margin: 15px 0;
+  color: #777;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+.login-btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #ff8b45;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+.signup-text a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+/* Styles for the Dashboard Page */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #e0f7fa;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-container h1 {
+  color: #00796b;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.dashboard-container p {
+  color: #333;
+  font-size: 18px;
+}
+
+.dashboard-container button {
+  padding: 10px 20px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dashboard-container button:hover {
+  background-color: #004d40;
+}
+
+
+
+
+
+
