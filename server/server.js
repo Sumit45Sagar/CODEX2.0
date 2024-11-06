@@ -140,6 +140,13 @@ const port = process.env.PORT || 3100;
 app.use(cookie());
 app.use(cors());
 app.use(bodyparser.json());
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
 
 app.use('/', SignUpRouter);
 // app.use('/protected', ProtectedRoute)

@@ -786,3 +786,27 @@ body {
 .highlight {
   color: #A1C181;
 }
+
+
+
+
+
+
+
+
+/*Logout button css : */
+.logoutBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background-color: #ff1a1a;
+}
